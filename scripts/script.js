@@ -1,5 +1,4 @@
 const themeButtons = document.querySelectorAll('.header__theme-menu-button');
-
 themeButtons.forEach((button) => {
   button.addEventListener('click', () => {
     themeButtons.forEach((btn) => {
@@ -21,13 +20,11 @@ themeButtons.forEach((button) => {
     button.setAttribute('disabled', true);
   });
 });
-
 function changeTheme(theme) {
   document.body.className = 'page';
   document.body.classList.add(`theme_${theme}`);
   localStorage.setItem('theme', theme);
 }
-
 function initTheme() {
   const theme = localStorage.getItem('theme');
   if (theme) {
@@ -44,5 +41,4 @@ function initTheme() {
       .setAttribute('disabled', true);
   }
 }
-
 initTheme();
