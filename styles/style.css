@@ -59,9 +59,9 @@
   margin-inline-start: 10px;
   border-radius: 50%;
   background-color: var(--main-color);
-  filter: drop-shadow(0px 0px 4px var(--main-color));
-  inline-size: 12px;
-  block-size: 12px;
+  filter: box-shadow: 0 0 4px 2px var(--main-color);
+  inline-size: 9px;
+  block-size: 9px;
 }
 .header__theme-menu {
   align-self: center;
@@ -81,7 +81,8 @@
   line-height: 100%;
   text-align: center;
 }
-.header__theme-menu-button {
+  .header__theme-menu-button:focus {
+  outline: none;
   min-width: 70px;
   min-height: 26px;
   font-weight: var(--regular-fw);
@@ -175,7 +176,9 @@ h4.subtitle {
 .main_link:hover {
   border-block-end: 1px solid var(--main-text-color);
 }
-.main_link:focus,
+.main_link:focus {
+  outline: none;
+}
 .main_link:focus-visible {
   outline: 1px solid var(--main-text-color);
 }
@@ -324,7 +327,7 @@ h4.subtitle {
     margin-block-end: 60px;
   }
   .footer_title {
-    text-shadow: 4px 4px 0 #ff0070;
+    text-shadow: 2px 2px 0 var(--main-text-color);
   }
   .rec_decor {
     top: 23px;
